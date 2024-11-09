@@ -1,0 +1,135 @@
+/* Variables */
+:root {
+    --background-dark: #1a1a2e;
+    --background-light: #162447;
+    --primary-accent: #4ecca3;
+    --secondary-accent: #f06449;
+    --text-light: #e0e0e0;
+    --text-muted: #a3a3a3;
+    --border-color: #2b2b52;
+  }
+  
+  /* Main Header Styling */
+  .home-header {
+    background-color: var(--background-dark);
+    color: var(--text-light);
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  }
+  
+  .home-header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .home-header__brand {
+    display: flex;
+    align-items: center;
+    color: var(--primary-accent);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .home-header__brand-icon {
+    margin-right: 0.5rem;
+    font-size: 1.5rem;
+  }
+  
+  .home-header__brand:hover {
+    color: var(--secondary-accent);
+  }
+  
+  .home-header__menu-button {
+    background: none;
+    border: none;
+    color: var(--primary-accent);
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .home-header__menu-button:hover {
+    color: var(--secondary-accent);
+  }
+  
+  /* Navigation Styling */
+  .home-header__nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--background-light);
+    width: 200px;
+    border-radius: 5px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+  }
+  
+  .home-header__nav.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  
+  .home-header__profile-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .home-header__profile-link {
+    display: flex;
+    align-items: center;
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 0.5rem 0;
+    width: 100%;
+  }
+  
+  .home-header__profile-link:hover {
+    color: var(--primary-accent);
+  }
+  
+  .home-header__profile-image {
+    font-size: 1.5rem;
+    margin-right: 0.75rem;
+    color: var(--primary-accent);
+  }
+  
+  .home-header__profile-text {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  /* Logout Button */
+  .home-header__logout-btn {
+    background-color: var(--secondary-accent);
+    color: var(--text-light);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    width: 100%;
+    justify-content: center;
+    transition: background 0.3s ease;
+  }
+  
+  .home-header__logout-btn:hover {
+    background-color: #d0503b; /* Slightly darker shade of secondary-accent */
+  }
+  
+  .home-header__logout-btn svg {
+    font-size: 1rem;
+  }
+  
